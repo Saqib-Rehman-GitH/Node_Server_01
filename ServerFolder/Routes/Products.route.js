@@ -50,6 +50,14 @@ ProductRoutes.post('/add', async (req, res, next) => {
     }
 })
 
+ProductRoutes.delete('/:name', async (req, res, next) => {
+    try{
+        SchemaProduct.find
+    }catch(e){
+        log(`Error ${e.message}`)
+    }
+})
+
 ProductRoutes.post('/update/:id', function (req, res, next) {
     next(new Error("Work in Progress"));
 })
