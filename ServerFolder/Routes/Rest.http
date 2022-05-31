@@ -1,0 +1,19 @@
+GET http://localhost:3000/products/
+###
+POST  http://localhost:3000/products
+###
+
+POST  http://localhost:3000/products/update/222
+###
+
+POST  http://localhost:3000/products/update-product/2002
+###
+
+POST  http://localhost:3000/products/add
+Content-Type: application/json
+
+{
+    "name": "iPhone 12",
+    "price" : 210000
+}
+###
