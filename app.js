@@ -1,5 +1,6 @@
 const express = require('express');
 const ProductRoutes = require('./ServerFolder/Routes/Products.route');
+const AuthRoutes = require('./ServerFolder/Routes/Auth/auth.routes');
 const mongoose = require('mongoose');
 
 
@@ -22,6 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // MIDDLE-WARES
 app.use('/products', ProductRoutes);
+app.use('/auth',AuthRoutes);
+
+
+
 
 //ERROR HANDLING MIDDLEWARES- IF NO ROUTE AVAILIBLE 
 app.use(function (req, res, next) {

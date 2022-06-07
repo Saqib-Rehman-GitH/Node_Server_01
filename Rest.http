@@ -17,3 +17,13 @@ Content-Type: application/json
     "price" : 210000
 }
 ###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"sa.reh0071@gmail.com",
+    "password":"12345678"
+}
+###
+
