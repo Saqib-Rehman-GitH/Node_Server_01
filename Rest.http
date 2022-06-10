@@ -22,8 +22,10 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "email":"sa.reh0071@gmail.com",
-    "password":"12345678"
+    "name":"Saqib Rehman",
+    "email":"john@mailinator.com",
+    "password":"12345678",
+    "password_confirmation":"12345678"
 }
 ###
 

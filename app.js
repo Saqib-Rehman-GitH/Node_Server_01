@@ -4,17 +4,29 @@ const AuthRoutes = require('./ServerFolder/Routes/Auth/auth.routes');
 const mongoose = require('mongoose');
 
 
+// PREV_DB
+// mongoose.connect('mongodb+srv://cluster0.e7vikd6.mongodb.net/?retryWrites=true&w=majority', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     dbName: "AppDB",
+//     pass: "saqib",
+//     user: "Saqib"
+// })
+//     .then(() => {
+//         console.log("Mongoose Connected ... ")
+//     })
 
-mongoose.connect('mongodb+srv://cluster0.e7vikd6.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://cluster01.yxw2kid.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     dbName: "AppDB",
     pass: "saqib",
-    user: "Saqib"
+    user: "saqibrehman903"
 })
     .then(() => {
         console.log("Mongoose Connected ... ")
     })
+    // mongodb+srv://saqibrehman903:<password>@cluster01.yxw2kid.mongodb.net/?retryWrites=true&w=majority
 
 const app = express();
 
