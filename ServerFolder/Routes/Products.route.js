@@ -52,7 +52,7 @@ ProductRoutes.post('/add', async (req, res, next) => {
 
 ProductRoutes.delete('/:name', async (req, res, next) => {
     try{
-        SchemaProduct.find
+        // SchemaProduct.find
     }catch(e){
         log(`Error ${e.message}`)
     }

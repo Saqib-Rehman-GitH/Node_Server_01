@@ -16,7 +16,7 @@ const mongoose = require('mongoose');
 //         console.log("Mongoose Connected ... ")
 //     })
 
-mongoose.connect('mongodb+srv://cluster01.yxw2kid.mongodb.net/?retryWrites=true&w=majority', {
+var mongooseConnection = mongoose.connect('mongodb+srv://cluster01.yxw2kid.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     dbName: "AppDB",
@@ -26,7 +26,9 @@ mongoose.connect('mongodb+srv://cluster01.yxw2kid.mongodb.net/?retryWrites=true&
     .then(() => {
         console.log("Mongoose Connected ... ")
     })
-    // mongodb+srv://saqibrehman903:<password>@cluster01.yxw2kid.mongodb.net/?retryWrites=true&w=majority
+
+// mongodb+srv://saqibrehman903:<password>@cluster01.yxw2kid.mongodb.net/?retryWrites=true&w=majority
+
 
 const app = express();
 
@@ -35,7 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // MIDDLE-WARES
 app.use('/products', ProductRoutes);
-app.use('/auth',AuthRoutes);
+app.use('/auth', AuthRoutes);
 
 
 
@@ -60,3 +62,5 @@ app.use(function (err, req, res, next) {
 app.listen(3000, () => {
     console.log(`Server Started Listening on Port 3000`)
 })
+
+module.exports = { mongooseConnection }

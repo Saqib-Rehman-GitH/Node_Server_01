@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express.Router();
 const SchemaUser = require('../../Model/SchemaUser').SchemaUser
-const SchemaUser = require('../../Model/SchemaUser').SchemaUserIdCount
 const httpErrors = require('http-errors');
 const nodemailer = require('nodemailer');
-const { SchemaUserIdCount } = require('../../Model/SchemaUser');
 
 //Send 
 // db.users.find().limit(1).sort({$natural:-1}) // Last Saved User.
